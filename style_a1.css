@@ -1,0 +1,39 @@
+body{
+    position: relative;
+    top: 1cm;
+}
+img{
+    background-color:pink;
+    
+  
+    width: 220px;
+    height: 400px;
+    position: fixed;
+    bottom: 1cm;
+    right: 1cm;
+
+    margin:20px 0px 20px 0px;
+    border-style: solid;
+    border-width: 0.5cm;
+    border-color:  aqua blue skyblue deeppink;
+    border-radius:1080px;
+    padding: 10px;
+}
+p{
+    position: relative;
+    top:0.5cm;
+    
+    
+}
+h1{
+    position: relative;
+    text-align: center;
+    color:white;
+    text-shadow: 2px 2px 5px black;
+    margin: 20px 0px 20px 0px;
+    border-style: groove;
+    border-width: 0.5cm;
+    border-color:pink;
+    
+
+}

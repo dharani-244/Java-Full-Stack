@@ -1,0 +1,27 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    font-style: italic;
+}
+th,b{
+    font-weight: 100;
+    font-style: italic;
+}
+p>sub{
+    text-decoration-color: bisque;
+}
+p>sup{
+    text-shadow: 1ch;
+}
+td,u{
+    color: blue;
+}
+.one{
+    background-color: aquamarine;
+}
+#two{
+    color: brown;
+    
+}
+

@@ -1,0 +1,51 @@
+body{
+    background-color: #add8e6;
+    transform:translate(3cm,2cm);
+    
+}
+p{
+    transition: background-color 6s ease=in-out;
+    
+}p:hover{
+    background-color: pink;
+    transition: background-color 2s ;
+}
+img{
+    animation:picture 10s ease-in-out 2s infinite;
+
+}
+@keyframes picture{
+    0%{
+        transform: translate(0cm,0cm) ;
+        border-style: solid;
+        border-width: 0.5cm;
+    }
+     25%{
+        transform: translate(10cm,0cm);
+        border-style: dashed;
+        border-width: 0.5cm;
+    }
+   
+    50%{
+        transform: translate(10cm,10cm);
+        border-style: dotted;
+        border-width: 0.5cm;
+    }
+     75%{
+        transform: translate(0cm,10cm);
+        border-style: double;
+        border-width: 0.5cm;
+    }
+    
+    100%{
+        transform: translate(0cm,0cm);
+        
+    }
+}
+img:hover{
+    border-style: groove;
+   border-width: 50px;
+    transform:skew(45deg);
+
+    
+}
