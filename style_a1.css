@@ -4,12 +4,12 @@ body{
 }
 img{
     background-color:pink;
-    
-  
-    width: 500px;
-    height: 920px;
+
+    width: 490px;
+    height: 980px;
     position: fixed;
-    bottom: 0.cm;
+    bottom: 0.2cm;
+
     top:0.1cm;
     
 
