@@ -1,0 +1,13 @@
+h1{
+    height: 100px;
+    background: conic-gradient(darkblue,blue,skyblue,pink,deeppink);
+}
+body{
+    display:flex;
+    flex-direction:column;
+    /*justify-content:center;
+    align-items:center;*/
+    flex-wrap:wrap;
+    gap: 20px;
+    flex-grow:1;
+}
