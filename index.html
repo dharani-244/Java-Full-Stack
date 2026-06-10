@@ -3,233 +3,168 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dharani M | Resume Profile</title>
+  <title>Dharani | Software Engineer Resume</title>
   <style>
     :root {
-      --bg: #0f172a;
-      --panel: #ffffff;
-      --muted: #475569;
-      --accent: #2563eb;
-      --accent-2: #7c3aed;
-      --line: #e2e8f0;
+      --bg: #07111f;
+      --panel: #0f172a;
+      --panel2: #111827;
+      --text: #eff6ff;
+      --muted: #dbe4f0;
+      --accent: #38bdf8;
+      --accent2: #a78bfa;
+      --line: rgba(148, 163, 184, 0.25);
     }
 
     * { box-sizing: border-box; }
-
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e293b 45%, #111827);
-      color: #0f172a;
+      background: linear-gradient(135deg, #020617, #0f172a 45%, #172554 100%);
+      color: var(--text);
       line-height: 1.6;
     }
 
-    .resume-card {
-      max-width: 1100px;
-      margin: 24px auto;
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.35);
-      border: 1px solid rgba(255, 255, 255, 0.15);
+    .page {
+      width: min(1100px, calc(100% - 24px));
+      margin: 18px auto;
+      padding-bottom: 28px;
+    }
+
+    .card {
+      background: rgba(9, 15, 28, 0.92);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.45);
+      backdrop-filter: blur(10px);
     }
 
     .hero {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      padding: 28px 30px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: #fff;
-    }
-
-    .badge {
-      text-transform: uppercase;
-      letter-spacing: 0.35em;
-      font-size: 0.78rem;
-      opacity: 0.9;
-    }
-
-    h1 {
-      margin: 6px 0 8px;
-      font-size: 2rem;
-      line-height: 1.2;
-    }
-
-    .subtext {
-      margin: 0;
-      color: rgba(255, 255, 255, 0.92);
-      max-width: 620px;
-    }
-
-    .avatar {
-      width: 96px;
-      height: 96px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.18);
-      border: 3px solid rgba(255, 255, 255, 0.55);
       display: grid;
-      place-items: center;
-      font-size: 1.6rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      flex-shrink: 0;
-    }
-
-    .content {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
+      grid-template-columns: 1.2fr 0.8fr;
       gap: 18px;
-      padding: 18px;
-      background: #f8fafc;
+      align-items: stretch;
     }
 
-    .panel {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 16px 18px;
-      box-shadow: 0 8px 16px rgba(15, 23, 42, 0.06);
-    }
+    .intro { padding: 24px; background: linear-gradient(135deg, rgba(56,189,248,0.10), rgba(167,139,250,0.10)); }
+    .eyebrow { text-transform: uppercase; letter-spacing: 0.35em; font-size: 0.78rem; color: #bfdbfe; }
+    h1 { font-size: clamp(2rem, 4vw, 2.8rem); margin: 10px 0 10px; line-height: 1.1; }
+    .highlight { color: #7dd3fc; }
+    .tagline { color: var(--muted); max-width: 540px; }
 
-    .panel h2 {
-      margin: 0 0 8px;
-      font-size: 1.02rem;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      color: var(--accent);
-    }
-
-    .panel p, .panel li {
-      color: #1f2937;
-      font-size: 0.98rem;
-    }
-
-    .info-list {
-      display: grid;
-      gap: 10px;
-      padding-left: 0;
-      list-style: none;
-      margin: 0;
-    }
-
-    .info-list li {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      border-bottom: 1px dashed var(--line);
-      padding-bottom: 8px;
-    }
-
-    .info-list li strong {
-      color: #111827;
-    }
-
-    .tag-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 10px;
-    }
-
-    .tag {
-      padding: 7px 10px;
+    .pill-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
+    .pill {
+      border: 1px solid rgba(125, 211, 252, 0.35);
+      background: rgba(15, 23, 42, 0.92);
+      color: #e0f2fe;
+      padding: 8px 12px;
       border-radius: 999px;
-      background: #eff6ff;
-      border: 1px solid #bfdbfe;
-      color: #1d4ed8;
-      font-size: 0.92rem;
-      font-weight: 600;
-    }
-
-    .mini-list {
-      margin: 6px 0 0;
-      padding-left: 18px;
-    }
-
-    .mini-list li { margin-bottom: 6px; }
-
-    .note {
-      color: var(--muted);
       font-size: 0.95rem;
-      margin-top: 6px;
     }
 
-    @media (max-width: 860px) {
-      .content { grid-template-columns: 1fr; }
-      .hero { flex-direction: column; align-items: flex-start; }
+    .profile-box { padding: 18px; display: flex; flex-direction: column; justify-content: space-between; gap: 14px; }
+    .avatar {
+      width: 110px; height: 110px; border-radius: 50%; display: grid; place-items: center;
+      font-size: 1.4rem; font-weight: 800; letter-spacing: 0.18em; color: #082f49;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      border: 2px solid rgba(255,255,255,0.15);
+    }
+    .mini-grid { display: grid; gap: 10px; }
+    .mini-card { padding: 10px 12px; border-radius: 14px; background: var(--panel2); border: 1px solid var(--line); }
+    .mini-card span { display: block; color: #bfdbfe; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.18em; }
+    .mini-card strong { display: block; color: #fff; font-size: 1rem; }
+
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 18px; }
+    .panel { padding: 18px; }
+    .panel h2 { margin-top: 0; margin-bottom: 8px; color: #7dd3fc; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.18em; }
+    .panel p, .panel li { color: var(--muted); font-size: 0.98rem; }
+    .list { margin: 0; padding-left: 18px; }
+    .list li { margin-bottom: 6px; }
+
+    .stats { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+    .stat { flex: 1 1 140px; padding: 10px 12px; border-radius: 14px; background: rgba(15,23,42,0.96); border: 1px solid var(--line); }
+    .stat strong { display: block; font-size: 1.05rem; color: #fff; }
+
+    .footnote { text-align: center; color: #dbeafe; margin-top: 12px; font-size: 0.95rem; }
+
+    @media (max-width: 900px) {
+      .hero, .grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
-  <main class="resume-card">
-    <header class="hero">
-      <div>
-        <p class="badge">Student Profile</p>
-        <h1>Dharani M</h1>
-        <p class="subtext">Computer Science &amp; Engineering student with a strong interest in web development, problem solving, creativity, and building simple digital projects.</p>
-      </div>
-      <div class="avatar">DM</div>
-    </header>
-
-    <section class="content">
-      <article class="panel">
-        <h2>Profile Summary</h2>
-        <p>I am a hardworking and curious learner who enjoys creating websites and exploring new technologies. I am passionate about writing clean code, understanding fundamentals, and improving my skills every day through practice and projects.</p>
-        <p class="note">This profile is designed as a simple resume-style page for your HTML/CSS learning workspace.</p>
-      </article>
-
-      <article class="panel">
-        <h2>Contact</h2>
-        <ul class="info-list">
-          <li><strong>Location</strong><span>India</span></li>
-          <li><strong>Field</strong><span>Computer Science</span></li>
-          <li><strong>Focus</strong><span>Web Development</span></li>
-          <li><strong>Status</strong><span>Student</span></li>
-        </ul>
-      </article>
-
-      <article class="panel">
-        <h2>Education</h2>
-        <ul class="mini-list">
-          <li>Currently pursuing Computer Science and Engineering.</li>
-          <li>Interested in HTML, CSS, JavaScript, and responsive design.</li>
-          <li>Building practical projects to strengthen technical and creative skills.</li>
-        </ul>
-      </article>
-
-      <article class="panel">
-        <h2>Skills</h2>
-        <div class="tag-wrap">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">Problem Solving</span>
-          <span class="tag">Teamwork</span>
-          <span class="tag">Creative Design</span>
-          <span class="tag">Time Management</span>
+  <main class="page">
+    <section class="hero">
+      <article class="card intro">
+        <p class="eyebrow">Resume Portfolio</p>
+        <h1>Hi, I’m <span class="highlight">Dharani</span></h1>
+        <p class="tagline">A motivated software engineer with strong skills in web development, problem solving, and creating user-friendly digital solutions. I am passionate about building efficient software and professional interfaces.</p>
+        <div class="pill-row">
+          <span class="pill">HTML</span>
+          <span class="pill">CSS</span>
+          <span class="pill">JavaScript</span>
+          <span class="pill">Java</span>
+          <span class="pill">Responsive Web Design</span>
         </div>
       </article>
 
-      <article class="panel">
-        <h2>Projects &amp; Interests</h2>
-        <ul class="mini-list">
-          <li>Created personal introduction and multimedia pages in this workspace.</li>
-          <li>Enjoys experimenting with layout, styling, and simple interactive web pages.</li>
-          <li>Interested in learning modern web tools and improving user-friendly design.</li>
+      <aside class="card profile-box">
+        <div>
+          <div class="avatar">DH</div>
+          <h2 style="margin: 12px 0 4px; font-size: 1.25rem;">Dharani</h2>
+          <p style="margin: 0; color: #cbd5e1;">BTech Student • Software Engineer Aspirant</p>
+        </div>
+
+        <div class="mini-grid">
+          <div class="mini-card"><span>Name</span><strong>Dharani</strong></div>
+          <div class="mini-card"><span>Degree</span><strong>BTech</strong></div>
+          <div class="mini-card"><span>College</span><strong>Mother Theresa</strong></div>
+          <div class="mini-card"><span>Phone</span><strong>9949060869</strong></div>
+          <div class="mini-card"><span>Email</span><strong>mdharani0896@gmail.com</strong></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="grid">
+      <article class="card panel">
+        <h2>Professional Summary</h2>
+        <p>I am an aspiring software engineer focused on web technologies, teamwork, and delivering clean code. I enjoy learning modern development tools and building practical solutions for real-world problems.</p>
+        <div class="stats">
+          <div class="stat"><strong>Web Development</strong> HTML, CSS, JavaScript</div>
+          <div class="stat"><strong>Problem Solving</strong> Logical thinking and debugging</div>
+          <div class="stat"><strong>Teamwork</strong> Collaboration and communication</div>
+        </div>
+      </article>
+
+      <article class="card panel">
+        <h2>Core Skills</h2>
+        <ul class="list">
+          <li>Frontend web development using HTML, CSS, and JavaScript</li>
+          <li>Responsive and user-friendly interface design</li>
+          <li>Basic Java programming and software logic development</li>
+          <li>Debugging, testing, and improving code quality</li>
+          <li>Strong communication and project collaboration</li>
         </ul>
       </article>
 
-      <article class="panel">
-        <h2>Strengths</h2>
-        <ul class="mini-list">
-          <li>Quick learner and motivated to improve.</li>
-          <li>Friendly, organized, and open to feedback.</li>
-          <li>Consistent practice and dedication are core to my growth.</li>
+      <article class="card panel">
+        <h2>Education</h2>
+        <p><strong>Degree:</strong> BTech</p>
+        <p><strong>College:</strong> Mother Theresa</p>
+        <p><strong>Focus:</strong> Software development, web technologies, and technical problem solving.</p>
+      </article>
+
+      <article class="card panel">
+        <h2>Projects & Strengths</h2>
+        <ul class="list">
+          <li>Created responsive portfolio and web page designs</li>
+          <li>Developed interest in software engineering principles and clean coding</li>
+          <li>Built confidence in learning, adapting, and working on technical projects</li>
         </ul>
       </article>
     </section>
+
+    <p class="footnote">Professional portfolio resume for Dharani • Software Engineer focused</p>
   </main>
 </body>
 </html>

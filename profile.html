@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dharani | Professional Resume</title>
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #111827;
+      --panel: #172033;
+      --text: #eff6ff;
+      --muted: #dbe4f0;
+      --accent: #38bdf8;
+      --accent2: #818cf8;
+      --line: #334155;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #020617, #111827 45%, #172554);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 18px auto;
+      padding: 18px;
+    }
+
+    .resume {
+      background: linear-gradient(135deg, rgba(17,24,39,0.97), rgba(15,23,42,0.98));
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 20px 45px rgba(15, 23, 42, 0.45);
+      overflow: hidden;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 24px;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .badge {
+      text-transform: uppercase;
+      letter-spacing: 0.35em;
+      font-size: 0.75rem;
+      color: #bfdbfe;
+    }
+
+    h1 {
+      margin: 8px 0 6px;
+      font-size: 2rem;
+      line-height: 1.15;
+    }
+
+    .sub {
+      margin: 0;
+      color: var(--muted);
+      max-width: 650px;
+    }
+
+    .avatar {
+      width: 86px;
+      height: 86px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #082f49;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      border: 2px solid rgba(255,255,255,0.15);
+      box-shadow: 0 14px 26px rgba(56,189,248,0.18);
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 16px;
+      padding: 16px;
+      background: rgba(15, 23, 42, 0.92);
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 14px;
+    }
+
+    .card h2 {
+      margin: 0 0 8px;
+      color: #7dd3fc;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.95rem;
+    }
+
+    .card p, .card li {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .grid2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .info {
+      display: grid;
+      gap: 8px;
+      padding-left: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .info li {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      border-bottom: 1px dashed var(--line);
+      padding-bottom: 6px;
+    }
+
+    .info li strong { color: #fff; }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .chip {
+      border-radius: 999px;
+      padding: 7px 10px;
+      background: #18212f;
+      border: 1px solid var(--line);
+      color: #e0f2fe;
+      font-size: 0.9rem;
+    }
+
+    .list { padding-left: 18px; margin: 6px 0 0; }
+    .list li { margin-bottom: 6px; }
+
+    .note {
+      color: #bfdbfe;
+      font-size: 0.92rem;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 900px) {
+      .content { grid-template-columns: 1fr; }
+      .header { flex-direction: column; align-items: flex-start; }
+      .grid2 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="resume">
+      <header class="header">
+        <div>
+          <p class="badge">Professional Resume</p>
+          <h1>Dharani</h1>
+          <p class="sub">B.Tech Student | Aspiring Software Professional | Strong interest in web development, coding, problem solving, and teamwork.</p>
+        </div>
+        <div class="avatar">DH</div>
+      </header>
+
+      <section class="content">
+        <div class="grid2">
+          <article class="card">
+            <h2>Profile</h2>
+            <p>I am a motivated and disciplined student with a strong interest in software development and web technologies. I aim to build practical skills, communicate effectively, and contribute to professional teams through quality work and continuous learning.</p>
+          </article>
+
+          <article class="card">
+            <h2>Contact</h2>
+            <ul class="info">
+              <li><strong>Phone</strong><span>9949060869</span></li>
+              <li><strong>Email</strong><span>mdharani0896@gmail.com</span></li>
+              <li><strong>Address</strong><span>Palamaner, Gangavaram, Chittoor District</span></li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h2>Education</h2>
+            <ul class="list">
+              <li><strong>Degree:</strong> B.Tech</li>
+              <li><strong>College:</strong> Mother Theresa</li>
+              <li><strong>Focus:</strong> Software development, web technologies, and problem solving.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h2>Technical Skills</h2>
+            <div class="skills">
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">Responsive Design</span>
+              <span class="chip">Problem Solving</span>
+              <span class="chip">Teamwork</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="grid2">
+          <article class="card">
+            <h2>Professional Strengths</h2>
+            <ul class="list">
+              <li>Quick learner with a strong willingness to improve technical and communication skills.</li>
+              <li>Capable of handling assignments with discipline, attention to detail, and consistency.</li>
+              <li>Interested in real-world software projects, user-friendly design, and efficient coding.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h2>Career Objective</h2>
+            <p>To secure a role in the software field where I can apply my knowledge of web development, problem solving, and teamwork to contribute effectively while growing as a professional.</p>
+            <p class="note">This resume is designed for interview readiness and professional presentation on a single page.</p>
+          </article>
+        </div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
