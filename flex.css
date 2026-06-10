@@ -1,0 +1,17 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightgray;
+    color: black;
+}
+.nonveg{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5cm;
+}
+ul{
+    display: flex;
+    gap: 1cm;
+    list-style: square;
+}
