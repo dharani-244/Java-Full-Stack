@@ -1,0 +1,8 @@
+properties to assign a variable
+-a name start with letter or word
+-no name start with number and number can be place after alphbet
+-we cannot have spaces instead of spaces we have underscope
+js actual name is *live script* and this is front end at first
+at that time java is trending it use to all 
+so they convert livve script to java script there is no relation between java and javascript
+
