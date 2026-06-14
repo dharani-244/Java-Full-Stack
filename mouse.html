@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+        #chocolate
+        {
+            /*width: 15cm;
+            height: 10cm;
+            background-color:aquamarine;
+            border-style: double;
+            border-width: 1cm;
+            border-radius: 25px;*/
+             width: 1cm;
+            height: 1cm;
+            position: relative;
+            background-color: lavender;
+            border-style: double;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="chocolate">
+       <p> Mouse over the space</p>
+    </div>
+    <script>
+     /*   const candy = document.getElementById("chocolate");
+        candy.addEventListener("mouseover",function ()
+    {
+        candy.style.backgroundColor="chocolate";
+        candy.innerText="Dark Chocolate";
+    });
+    candy.addEventListener("mouseout",function ()
+    {
+        candy.style.backgroundColor="lavender";
+        candy.innerText="Kitkat";
+    }
+    );*/
+         const box=document.getElementById("chocolate");
+        let x=100;
+        let y=100;
+        const step =10;
+        document.addEventListener("keydown",function (keys) {
+            if (keys.code=="ArrowDown") {
+                y+=step;
+            }
+            box.style.left=x+"px";
+            box.style.top=y+"px";
+        });
+        const candy = document.getElementById("chocolate");
+        candy.addEventListener("mouseover",function ()
+    {
+        candy.style.backgroundColor="chocolate";
+        candy.innerText="Dark Chocolate";
+    });
+    candy.addEventListener("mouseout",function ()
+    {
+        candy.style.backgroundColor="lavender";
+        candy.innerText="Kitkat";
+    }
+    );
+ 
+
+
+    </script>
+</body>
+</html> 

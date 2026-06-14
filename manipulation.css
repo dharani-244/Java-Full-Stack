@@ -1,0 +1,31 @@
+img{
+    
+    width: 300px;
+
+    margin:5px 0px 5px 0px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: purple;
+    border-radius:10px;
+    padding: 5px;
+    
+    
+}
+body{
+    background-color: palevioletred;
+    text-align: center;
+}
+#wish{
+    text-align:center;
+    color:purple;
+    border-radius: 20px;
+    border: 1cm;
+    font-style: normal;
+}
+p{
+    
+    color:purple;
+    text-align: center;
+    
+
+}

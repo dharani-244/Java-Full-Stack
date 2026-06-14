@@ -1,0 +1,11 @@
+.room{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+#class{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap:wrap ;
+}
